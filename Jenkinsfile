@@ -8,7 +8,7 @@ pipeline {
     }
 
     tools {
-    maven 'Maven3' // el nombre debe coincidir
+    maven 'Maven3' // el nombre debe coincidir con tools maven
     }
 
     stages{
