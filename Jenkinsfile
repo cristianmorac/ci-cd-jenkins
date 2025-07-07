@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages{
-        when { expressions { param.action == 'create'}}
+        /* when { expressions { param.action == 'create'}} */
         stage('Git checkout'){
             steps {
                 gitCheckout(
@@ -18,7 +18,7 @@ pipeline {
         }
 
         stage('Unit test maven'){
-            when { expressions { param.action == 'create'}}
+            /* when { expressions { param.action == 'create'}} */
             steps {
                 script {
                     /* Instalar maven apt install maven -y */
@@ -28,7 +28,7 @@ pipeline {
         }
 
         stage('Integration test maven'){
-            when { expressions { param.action == 'create'}}
+            /* when { expressions { param.action == 'create'}} */
             steps{
                 script {
                     mvnIntegrationTest()
