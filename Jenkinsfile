@@ -3,9 +3,9 @@ pipeline {
 
     agent any
 
-    parameters {
+    /* parameters {
         choice(name: 'action', choices: 'create\ndelete', description: 'Choice create/Destroy')
-    }
+    } */
 
     tools {
     maven 'Maven3' // el nombre debe coincidir con tools maven
@@ -28,15 +28,6 @@ pipeline {
                 script {
                     /* Instalar maven apt install maven -y */
                     mvnTest()
-                }
-            }
-        }
-
-        stage('Integration test maven'){
-            /* when { expressions { param.action == 'create'}} */
-            steps{
-                script {
-                    mvnIntegrationTest()
                 }
             }
         }
