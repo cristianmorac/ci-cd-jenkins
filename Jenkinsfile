@@ -1,9 +1,14 @@
 @Library('my-shared-library') _
 pipeline {
+    
     agent any
 
     parameters {
         choice(name: 'action', choices: 'create\ndelete', description: 'Choice create/Destroy')
+    }
+
+    tools {
+    maven 'Maven 3.9.5' // el nombre debe coincidir
     }
 
     stages{
