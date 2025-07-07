@@ -14,7 +14,16 @@ pipeline {
         stage('Unit test maven'){
             steps {
                 script {
+                    /* Instalar maven apt install maven -y */
                     mvnTest()
+                }
+            }
+        }
+
+        stage('Integration test maven'){
+            steps{
+                script {
+                    mvnIntegrationTest()
                 }
             }
         }
