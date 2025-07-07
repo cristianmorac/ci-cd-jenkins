@@ -1,6 +1,6 @@
 @Library('my-shared-library') _
 pipeline {
-    
+
     agent any
 
     parameters {
@@ -8,7 +8,7 @@ pipeline {
     }
 
     tools {
-    maven 'Maven 3.9.5' // el nombre debe coincidir
+    maven 'Maven3' // el nombre debe coincidir
     }
 
     stages{
