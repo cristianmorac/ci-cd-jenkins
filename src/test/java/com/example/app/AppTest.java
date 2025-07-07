@@ -1,14 +1,13 @@
-package com.example.app;
+package com.example;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AppTest {
 
     @Test
-    public void testGreet() {
+    void testSuma() {
         App app = new App();
-        assertEquals("Hola Cristian", app.greet("Cristian"));
+        assertEquals(5, app.sumar(2, 3));
     }
 }
