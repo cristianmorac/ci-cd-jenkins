@@ -27,5 +27,14 @@ pipeline {
                 }
             }
         }
+
+        stage('Integration test maven'){
+            /* when { expressions { param.action == 'create'}} */
+            steps{
+                script {
+                    mvnIntegrationTest()
+                }
+            }
+        }
     }
 }
