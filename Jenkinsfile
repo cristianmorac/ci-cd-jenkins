@@ -9,6 +9,7 @@ pipeline {
 
     tools {
     maven 'Maven3' // el nombre debe coincidir con tools maven
+    jdk 'jdk-21'
     }
 
     stages{
