@@ -7,11 +7,6 @@ pipeline {
         choice(name: 'action', choices: 'create\ndelete', description: 'Choice create/Destroy')
     } */
 
-    tools {
-    maven 'Maven3' // el nombre debe coincidir con tools maven
-    jdk 'jdk-21'
-    }
-
     stages{
         /* when { expressions { param.action == 'create'}} */
         stage('Git checkout'){
