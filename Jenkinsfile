@@ -75,6 +75,7 @@ pipeline {
             when { expression { params.action == 'create'} }
             steps{
                 script{
+                    // agregar a jenkins en grupo deocker sudo usermod -aG docker jenkins
                     dockerBuild("${params.ImageName}","${params.ImageTag}","${params.DockerHubUser}")
                 }
             }
